@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Hack the Python path to add our library as first in the search path
+# Hack the Python path to add our `lib` as first in the search path
 import os
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../lib'))
