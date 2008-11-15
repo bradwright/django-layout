@@ -8,7 +8,8 @@ Project Naming
 
 Obviously the `.git` objects are included when checking out from GitHub, so you should copy the appropriate directories to somewhere Git-free (if you want):
 
-    $ cp -r !(.git) ../mynewdjangoproject
+    $ cp -R . ../mynewdjangoproject
+    $ rm -rf ../mynewdjangoproject/.git
 
 By default it comes named as `yoursite`, but you should obviously name it yourself:
 
