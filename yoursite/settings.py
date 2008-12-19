@@ -1,5 +1,7 @@
 # Django settings for yoursite project.
 
+import os
+
 TEMPLATE_DEBUG = DEBUG = True
 
 ADMINS = (
