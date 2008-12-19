@@ -20,12 +20,17 @@ urlpatterns = patterns('',
 
 # this is for serving static files in development
 if settings.DEBUG:
+    import os
+    # get the static path from settings
+    static_url = settings.MEDIA_URL
+    if static_url.startswith('/'):
+        static_url = static_url.lstrip('/')
     urlpatterns += patterns('',
         (
-            r'^static/(?P<path>.*)$',
+            r'^%s(?P<path>.*)$' % static_url,
             'django.views.static.serve',
             {
-                'document_root': os.path.join(os.path.dirname(__file__), '../static')
+                'document_root': settings.MEDIA_ROOT
             }
         ),
     )
