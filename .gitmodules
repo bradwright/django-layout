@@ -1,0 +1,3 @@
+[submodule "yoursite/static_management"]
+	path = yoursite/static_management
+	url = git://github.com/bradleywright/django-static-management.git
