@@ -26,3 +26,14 @@ Python Path
     # just works!
 
 This allows you to bundle your own library modules or external dependencies (dmigrations, simplejson etc.) with your project as required. It also means that a checkout to a plain Python system should Just Work™.
+
+Dependencies
+------------
+
+This project has a dependency on [Django Static Management](http://github.com/bradleywright/django-static-management), another project of mine. It provides an easy way of managing static files. It's included as a `git submodule`, so you'll need to run the following commands to get the latest version:
+
+    $ cd yoursite/static_management
+    $ git remote update
+    $ git merge origin/master
+    $ cd ../..
+    $ git commit -a -m "Update to HEAD of static management"
