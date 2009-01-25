@@ -7,10 +7,10 @@ from django.core.handlers.wsgi import WSGIHandler
 
 # Patch Python path to include applications when running under WSGI mode (see 
 # manage.py)
-sys.path.append(os.path.join(os.path.dirname(__file__), '../../'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../'))
 
 # Patch Python path to include `lib` directory
-sys.path.append(os.path.join(os.path.dirname(__file__), '../../lib'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../lib'))
 
 # Use production settings
 os.environ['DJANGO_SETTINGS_MODULE'] = 'yoursite.settings_production'
