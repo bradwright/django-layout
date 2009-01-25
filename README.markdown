@@ -16,7 +16,7 @@ By default it comes named as `yoursite`, but you should obviously name it yourse
     $ mv yoursite mydomain
 
 Python Path
-------------
+-----------
 
 `manage.py` automatically patches your sys.path to include files under `lib`, so you can feel free to put Python modules here:
 
@@ -26,6 +26,11 @@ Python Path
     # just works!
 
 This allows you to bundle your own library modules or external dependencies (dmigrations, simplejson etc.) with your project as required. It also means that a checkout to a plain Python system should Just Work™.
+
+Deployment
+----------
+
+At the moment this project comes with the Apache configuration required to server the site via mod\_wsgi. Note that the recommended way is using mod\_python, but most people on the mailing lists would tell you to use mod\_wsgi. So that's what you get.
 
 Dependencies
 ------------
