@@ -42,3 +42,10 @@ This project has a dependency on [Django Static Management](http://github.com/br
     $ git merge origin/master
     $ cd ../..
     $ git commit -a -m "Update to HEAD of static management"
+
+If you're checking out a new version, you need these commands first:
+
+    $ git submodule init
+    $ git submodule update
+
+to initialise the submodule.
